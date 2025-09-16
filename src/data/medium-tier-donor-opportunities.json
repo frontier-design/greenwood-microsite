@@ -1,0 +1,58 @@
+{
+  "tier": "Medium Tier",
+  "subtitle": "$100,000 — $150,000",
+  "topRowOpportunities": [
+    {
+      "id": "west-garden-opportunity",
+      "image": "/src/assets/images/Greenwood_UpdatedPictures/Greenwood_West_gathering_garden.jpg",
+      "alt": "West Gathering Garden outdoor space",
+      "title": "West Gathering Garden",
+      "description": "Create a lasting legacy with a named sign and bench, providing a cherished landmark for students.",
+      "amount": "$150,000",
+      "buttonText": "Donate Now",
+      "buttonLink": "#"
+    },
+    {
+      "id": "east-garden-opportunity",
+      "image": "/src/assets/images/Greenwood_UpdatedPictures/Greenwood_East_gathering_garden.jpg",
+      "alt": "East Gathering Garden with covered seating",
+      "title": "East Gathering Garden",
+      "description": "Create a lasting legacy with a named sign and bench, providing a cherished landmark for students.",
+      "amount": "$150,000",
+      "buttonText": "Donate Now",
+      "buttonLink": "#"
+    }
+  ],
+  "bottomRowOpportunities": [
+    {
+      "id": "mesh-netting-opportunity",
+      "image": "/src/assets/images/Greenwood_UpdatedPictures/Greenwood_Mesh_Safety_Netting.jpg",
+      "alt": "Mesh safety netting structure",
+      "title": "Mesh Safety Netting",
+      "description": "Create a lasting legacy with a named sign and bench.",
+      "amount": "$100,000",
+      "buttonText": "Donate Now",
+      "buttonLink": "#"
+    },
+    {
+      "id": "feature-bench-opportunity",
+      "image": "/src/assets/images/Greenwood_UpdatedPictures/Greenwood_Feature_Bench.jpg",
+      "alt": "Greenwood feature bench in landscaped area",
+      "title": "Greenwood Feature Bench",
+      "description": "Create a lasting legacy with a named sign and bench.",
+      "amount": "$100,000",
+      "buttonText": "Donate Now",
+      "buttonLink": "#"
+    },
+    {
+      "id": "social-space-opportunity",
+      "image": "/src/assets/images/Greenwood_UpdatedPictures/Greenwood_Social_Space.png",
+      "alt": "Social space at night with lighting",
+      "title": "Social Space",
+      "description": "Create a lasting legacy with a named sign and bench.",
+      "amount": "$100,000",
+      "buttonText": "Donate Now",
+      "buttonLink": "#"
+    }
+  ]
+}

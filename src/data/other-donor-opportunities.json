@@ -1,0 +1,70 @@
+{
+  "tier": "Other",
+  "subtitle": "$10,000 — $75,000",
+  "opportunities": [
+    {
+      "id": "hillock-opportunity",
+      "title": "Hillock",
+      "description": "Create a lasting legacy with a named sign and bench.",
+      "amount": "$50,000",
+      "buttonText": "Donate Now",
+      "buttonLink": "#"
+    },
+    {
+      "id": "hydration-station-opportunity",
+      "title": "Hydration Station",
+      "description": "Create a lasting legacy with a named sign and bench.",
+      "amount": "$35,000",
+      "buttonText": "Donate Now",
+      "buttonLink": "#"
+    },
+    {
+      "id": "north-green-fence-opportunity",
+      "title": "North Green Fence",
+      "description": "Create a lasting legacy with a named sign and bench.",
+      "amount": "$25,000",
+      "buttonText": "Donate Now",
+      "buttonLink": "#"
+    },
+    {
+      "id": "west-green-fence-opportunity",
+      "title": "West Green Fence",
+      "description": "Create a lasting legacy with a named sign and bench.",
+      "amount": "$25,000",
+      "buttonText": "Donate Now",
+      "buttonLink": "#"
+    },
+    {
+      "id": "greening-trees-opportunity",
+      "title": "Greening the Green Trees",
+      "description": "Create a lasting legacy with a named sign and bench.",
+      "amount": "$25,000",
+      "buttonText": "Donate Now",
+      "buttonLink": "#"
+    },
+    {
+      "id": "concrete-benches-opportunity",
+      "title": "Concrete Benches",
+      "description": "Create a lasting legacy with a named sign and bench.",
+      "amount": "$15,000",
+      "buttonText": "Donate Now",
+      "buttonLink": "#"
+    },
+    {
+      "id": "lamp-posts-opportunity",
+      "title": "Lamp Posts",
+      "description": "Create a lasting legacy with a named sign and bench.",
+      "amount": "$10,000",
+      "buttonText": "Donate Now",
+      "buttonLink": "#"
+    },
+    {
+      "id": "city-trees-opportunity",
+      "title": "Planting of the City Trees Along Property Line",
+      "description": "Create a lasting legacy with a named sign and bench.",
+      "amount": "$10,000",
+      "buttonText": "Donate Now",
+      "buttonLink": "#"
+    }
+  ]
+}
