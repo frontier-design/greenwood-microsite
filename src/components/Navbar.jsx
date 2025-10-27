@@ -190,19 +190,6 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   };
 
-  const scrollToDonorOpportunities = () => {
-    const element = document.getElementById('top-tier-donor-opportunity');
-    if (element) {
-      const navbarHeight = 80; // Approximate navbar height + padding
-      const elementPosition = element.offsetTop - navbarHeight;
-      window.scrollTo({
-        top: elementPosition,
-        behavior: 'smooth'
-      });
-    }
-    setIsMobileMenuOpen(false);
-  };
-
   const scrollToInfo = () => {
     const element = document.getElementById('info-section');
     if (element) {
@@ -263,9 +250,13 @@ const Navbar = () => {
             <NavLink onClick={scrollToContact}>Contact Us</NavLink>
           </NavLinks>
           
-          <DesktopDonateButton onClick={scrollToDonorOpportunities}>Donate Now</DesktopDonateButton>
+          <a href="https://www.greenwoodcollege.org/support-the-greenspace-development" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+            <DesktopDonateButton>Donate Now</DesktopDonateButton>
+          </a>
           
-          <MobileDonateButtonSmall onClick={scrollToDonorOpportunities}>Donate</MobileDonateButtonSmall>
+          <a href="https://www.greenwoodcollege.org/support-the-greenspace-development" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+            <MobileDonateButtonSmall>Donate</MobileDonateButtonSmall>
+          </a>
           
           <MobileMenuButton onClick={toggleMobileMenu}>
             {isMobileMenuOpen ? <HiX /> : <HiMenu />}
@@ -275,7 +266,9 @@ const Navbar = () => {
             <MobileMenuLinks>
               <MobileNavLink onClick={scrollToInfo}>Info</MobileNavLink>
               <MobileNavLink onClick={scrollToContact}>Contact Us</MobileNavLink>
-              <MobileDonateButton onClick={scrollToDonorOpportunities}>Donate Now</MobileDonateButton>
+              <a href="https://www.greenwoodcollege.org/support-the-greenspace-development" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                <MobileDonateButton>Donate Now</MobileDonateButton>
+              </a>
             </MobileMenuLinks>
           </MobileMenuDropdown>
         </NavRight>

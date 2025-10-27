@@ -143,7 +143,7 @@ const LandingHero = () => {
         <Description>
           Greenwood's Greenspace Project is transforming newly acquired land into a hub for sports, experiential education, learning, play, and connection.
         </Description>
-        <DonateButton onClick={scrollToDonorOpportunities}>Donate Now</DonateButton>
+        <DonateButton onClick={scrollToDonorOpportunities}>See Donation Opportunities</DonateButton>
       </HeroContent>
     </HeroContainer>
   );
