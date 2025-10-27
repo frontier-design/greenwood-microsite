@@ -151,11 +151,13 @@ const TopTierDonorOpportunity = () => {
             <MainOpportunityTitle dangerouslySetInnerHTML={{ __html: mainOpportunity.title }} />
             </div>
            <div>
-           <MainDescription>
+            <MainDescription>
               {mainOpportunity.description}
             </MainDescription>
             <MainAmount>{mainOpportunity.amount}</MainAmount>
-            <DonateButton>{mainOpportunity.buttonText}</DonateButton>
+            <a href="https://www.greenwoodcollege.org/support-the-greenspace-development" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+              <DonateButton>{mainOpportunity.buttonText}</DonateButton>
+            </a>
            </div>
           </MainContent>
         </MainOpportunity>
@@ -174,7 +176,9 @@ const TopTierDonorOpportunity = () => {
                     {opportunity.description}
                   </GridItemDescription>
                   <GridItemAmount>{opportunity.amount}</GridItemAmount>
-                  <GridDonateButton textColor="var(--brand-green)">{opportunity.buttonText}</GridDonateButton>
+                  <a href="https://www.greenwoodcollege.org/support-the-greenspace-development" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                    <GridDonateButton textColor="var(--brand-green)">{opportunity.buttonText}</GridDonateButton>
+                  </a>
                 </GridItemContent>
               </FullWidthGridItem>
             );
@@ -197,7 +201,9 @@ const TopTierDonorOpportunity = () => {
                       {opportunity.description}
                     </GridItemDescription>
                     <GridItemAmount>{opportunity.amount}</GridItemAmount>
-                    <GridDonateButton textColor="var(--brand-green)">{opportunity.buttonText}</GridDonateButton>
+                    <a href="https://www.greenwoodcollege.org/support-the-greenspace-development" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                      <GridDonateButton textColor="var(--brand-green)">{opportunity.buttonText}</GridDonateButton>
+                    </a>
                   </GridItemContent>
                 </GridItem>
               );

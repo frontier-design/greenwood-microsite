@@ -62,7 +62,9 @@ const InfoSection = () => {
           <Description>
             In the Greenspace, our students can run on the incredible turf, gather with friends for fresh air under the pergola at lunch time, and connect with classmates on the turf-mound on a sunny day.
           </Description>
-          <DonateButton>Read More</DonateButton>
+          <a href="https://www.greenwoodcollege.org/about/expanding-our-campus" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+            <DonateButton>Read More</DonateButton>
+          </a>
         </TextColumn>
         
         <ImageColumn>

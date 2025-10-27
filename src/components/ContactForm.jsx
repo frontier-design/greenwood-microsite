@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import { SectionTitle, DonateButton } from '../styles/GlobalStyles';
 
@@ -69,6 +70,11 @@ const FormInput = styled.input`
   &::placeholder {
     color: #999;
   }
+
+  &:disabled {
+    background: #f5f5f5;
+    cursor: not-allowed;
+  }
 `;
 
 const FormTextarea = styled.textarea`
@@ -92,6 +98,11 @@ const FormTextarea = styled.textarea`
   &::placeholder {
     color: #999;
   }
+
+  &:disabled {
+    background: #f5f5f5;
+    cursor: not-allowed;
+  }
 `;
 
 const SubmitButton = styled(DonateButton)`
@@ -104,17 +115,90 @@ const SubmitButton = styled(DonateButton)`
   border: none;
   transition: all 0.2s ease;
 
-  &:hover {
+  &:hover:not(:disabled) {
     background: #001a7a;
     transform: translateY(1px);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+`;
+
+const StatusMessage = styled.div`
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  
+  &.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+  
+  &.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
   }
 `;
 
 const ContactForm = () => {
-  const handleSubmit = (e) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [statusMessage, setStatusMessage] = useState(null);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Form submission logic will go here
-    console.log('Form submitted');
+    setIsSubmitting(true);
+    setStatusMessage(null);
+
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+    
+    // Check if access key is configured
+    if (!accessKey) {
+      console.error('Web3Forms access key is not configured. Please add VITE_WEB3FORMS_ACCESS_KEY to your .env file.');
+      setStatusMessage({ 
+        type: 'error', 
+        text: 'Contact form is not configured. Please email us directly at katie.evans@greenwoodcollege.org' 
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
+    const formData = new FormData(e.target);
+    
+    // Add required fields for Web3Forms
+    formData.append('access_key', accessKey);
+    formData.append('subject', 'New Contact Form Submission - Greenwood Microsite');
+    formData.append('from_name', 'Greenwood Microsite');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setStatusMessage({ type: 'success', text: 'Thank you for your message! We\'ll get back to you soon.' });
+        e.target.reset();
+      } else {
+        console.error('Web3Forms error:', data);
+        setStatusMessage({ 
+          type: 'error', 
+          text: data.message || 'Something went wrong. Please try again or contact us directly at katie.evans@greenwoodcollege.org' 
+        });
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setStatusMessage({ type: 'error', text: 'Failed to send message. Please try again or contact us directly at katie.evans@greenwoodcollege.org' });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -137,6 +221,7 @@ const ContactForm = () => {
                 name="name"
                 placeholder="Enter your name"
                 required
+                disabled={isSubmitting}
               />
             </FormField>
 
@@ -148,6 +233,7 @@ const ContactForm = () => {
                 name="email"
                 placeholder="Enter your email"
                 required
+                disabled={isSubmitting}
               />
             </FormField>
           </FormRow>
@@ -159,11 +245,18 @@ const ContactForm = () => {
               name="message"
               placeholder="Tell us about your question or inquiry..."
               required
+              disabled={isSubmitting}
             />
           </FormField>
 
-          <SubmitButton type="submit">
-            Contact Us
+          {statusMessage && (
+            <StatusMessage className={statusMessage.type}>
+              {statusMessage.text}
+            </StatusMessage>
+          )}
+
+          <SubmitButton type="submit" disabled={isSubmitting}>
+            {isSubmitting ? 'Sending...' : 'Contact Us'}
           </SubmitButton>
         </FormContainer>
       </ContactFormContent>

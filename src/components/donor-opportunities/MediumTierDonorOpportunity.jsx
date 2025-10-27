@@ -123,7 +123,9 @@ const MediumTierDonorOpportunity = () => {
                     {opportunity.description}
                   </GridItemDescription>
                   <GridItemAmount>{opportunity.amount}</GridItemAmount>
-                  <GridDonateButton textColor="var(--brand-navy)">{opportunity.buttonText}</GridDonateButton>
+                  <a href="https://www.greenwoodcollege.org/support-the-greenspace-development" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                    <GridDonateButton textColor="var(--brand-navy)">{opportunity.buttonText}</GridDonateButton>
+                  </a>
                 </GridItemContent>
               </GridItem>
             ))}
@@ -143,7 +145,9 @@ const MediumTierDonorOpportunity = () => {
                     {opportunity.description}
                   </GridItemDescription>
                   <GridItemAmount>{opportunity.amount}</GridItemAmount>
-                  <GridDonateButton textColor="var(--brand-navy)">{opportunity.buttonText}</GridDonateButton>
+                  <a href="https://www.greenwoodcollege.org/support-the-greenspace-development" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                    <GridDonateButton textColor="var(--brand-navy)">{opportunity.buttonText}</GridDonateButton>
+                  </a>
                 </GridItemContent>
               </GridItem>
             ))}

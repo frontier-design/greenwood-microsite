@@ -36,6 +36,7 @@ const LogoSection = styled.div`
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  cursor: pointer;
 `;
 
 const LogoIcon = styled.img`
@@ -181,6 +182,14 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const mobileMenuRef = useRef(null);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+    setIsMobileMenuOpen(false);
+  };
+
   const scrollToDonorOpportunities = () => {
     const element = document.getElementById('top-tier-donor-opportunity');
     if (element) {
@@ -244,7 +253,7 @@ const Navbar = () => {
   return (
     <NavContainer>
       <NavContent>
-        <LogoSection>
+        <LogoSection onClick={scrollToTop}>
           <LogoIcon src={greenwoodLogo} alt="Greenwood Logo" />
         </LogoSection>
         

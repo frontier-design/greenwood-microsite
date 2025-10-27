@@ -143,13 +143,15 @@ const OtherDonorOpportunities = () => {
                 </OpportunityDescription>
               </OpportunityInfo>
               <OpportunityAmount>{opportunity.amount}</OpportunityAmount>
-              <GridDonateButton 
-                backgroundColor="var(--brand-gray)" 
-                textColor="white"
-                style={{ backgroundColor: 'var(--brand-gray)', color: 'white' }}
-              >
-                {opportunity.buttonText}
-              </GridDonateButton>
+              <a href="https://www.greenwoodcollege.org/support-the-greenspace-development" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                <GridDonateButton 
+                  backgroundColor="var(--brand-gray)" 
+                  textColor="white"
+                  style={{ backgroundColor: 'var(--brand-gray)', color: 'white' }}
+                >
+                  {opportunity.buttonText}
+                </GridDonateButton>
+              </a>
             </OpportunityItem>
           ))}
         </OpportunitiesList>
