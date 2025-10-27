@@ -5,6 +5,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -22,6 +24,6 @@ jobs:
           rm -rf public
           git add -A
           git commit -m "Publish build"
-          git remote add origin https://github.com/frontier-design/greenwood-microsite.git
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/frontier-design/greenwood-microsite.git
           git push -f origin deploy
 
