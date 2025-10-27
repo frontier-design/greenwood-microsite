@@ -1,0 +1,49 @@
+{
+  "tier": "Top Tier",
+  "subtitle": "$250,000+",
+  "mainOpportunity": {
+    "id": "turf-field-opportunity",
+    "image": "/src/assets/images/Greenwood_UpdatedPictures/Greenwood_Turf_Field_Sign.jpg",
+    "alt": "Greenwood Green turf field with students playing soccer",
+    "title": "The Greenwood Green<br />(Turf Field)",
+    "description": "The turf field is central to student athletics and outdoor activity, fostering teamwork and well-being. A leadership gift will name the field, leaving a lasting legacy.",
+    "amount": "$1,000,000",
+    "buttonText": "Donate Now",
+    "buttonLink": "#"
+  },
+  "gridOpportunities": [
+    {
+      "id": "sign-bench-opportunity",
+      "image": "/src/assets/images/Greenwood_UpdatedPictures/Greenwood_sign_and_bench.jpg",
+      "alt": "Greenwood sign and bench in landscaped area",
+      "title": "Greenwood Sign & Bench",
+      "description": "Create a lasting legacy with a named sign and bench, serving as a cherished landmark for students to gather and connect.",
+      "amount": "$500,000",
+      "buttonText": "Donate Now",
+      "buttonLink": "#",
+      "isFullWidth": true
+    },
+    {
+      "id": "gate-opportunity",
+      "image": "/src/assets/images/Greenwood_UpdatedPictures/Greenwood_gate.jpg",
+      "alt": "The Greenwood Gate entrance",
+      "title": "The Greenwood Gate",
+      "description": "Create a lasting legacy with a named sign and bench, providing a cherished landmark for students and visitors.",
+      "amount": "$250,000",
+      "buttonText": "Donate Now",
+      "buttonLink": "#",
+      "isFullWidth": false
+    },
+    {
+      "id": "flood-lighting-opportunity",
+      "image": "/src/assets/images/Greenwood_UpdatedPictures/Greenwood_Flood_Lighting.jpg",
+      "alt": "Turf field at night with flood lighting",
+      "title": "Flood Lighting",
+      "description": "Create a lasting legacy with a named sign and bench, providing a cherished landmark for evening activities.",
+      "amount": "$250,000",
+      "buttonText": "Donate Now",
+      "buttonLink": "#",
+      "isFullWidth": false
+    }
+  ]
+}
