@@ -33,6 +33,7 @@ const FooterLeft = styled.div`
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  cursor: pointer;
 `;
 
 const FooterLogo = styled.img`
@@ -96,22 +97,55 @@ const FooterCopyright = styled.p`
 `;
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const scrollToInfo = () => {
+    const element = document.getElementById('info-section');
+    if (element) {
+      const navbarHeight = 80;
+      const elementPosition = element.offsetTop - navbarHeight;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const scrollToContact = () => {
+    const element = document.getElementById('contact-form');
+    if (element) {
+      const navbarHeight = 80;
+      const elementPosition = element.offsetTop - navbarHeight;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <>
       <hr style={{ width: '100%', maxWidth: '1200px', border: '0.5px solid #e0e0e0', margin: '0 auto' }} />
     <FooterContainer>
       <FooterContent>
-        <FooterLeft>
+        <FooterLeft onClick={scrollToTop}>
           <FooterLogo src={greenwoodLogo} alt="Greenwood Logo" />
         </FooterLeft>
         
         <FooterRight>
           <FooterNav>
-            <FooterLink>Info</FooterLink>
-            <FooterLink>Contact Us</FooterLink>
+            <FooterLink onClick={scrollToInfo}>Info</FooterLink>
+            <FooterLink onClick={scrollToContact}>Contact Us</FooterLink>
           </FooterNav>
           
-          <FooterDonateButton>Donate Now</FooterDonateButton>
+          <a href="https://www.greenwoodcollege.org/support-the-greenspace-development" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+            <FooterDonateButton>Donate Now</FooterDonateButton>
+          </a>
           
           <FooterCopyright>© Greenwood 2025</FooterCopyright>
         </FooterRight>
