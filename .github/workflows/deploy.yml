@@ -16,16 +16,13 @@ jobs:
       - run: npm run build
         env:
           VITE_WEB3FORMS_ACCESS_KEY: ${{ secrets.VITE_WEB3FORMS_ACCESS_KEY }}
-      - run: |
-          rm -rf .git
+      - name: Deploy to deploy branch
+        run: |
+          cd dist
           git init
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git checkout -b deploy
-          mv dist/* .
-          rm -rf dist
           git add -A
-          git commit -m "Publish build"
-          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/frontier-design/greenwood-microsite.git
-          git push -f origin deploy
+          git commit -m "Deploy build from ${{ github.sha }}"
+          git push -f https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/frontier-design/greenwood-microsite.git HEAD:deploy
 
