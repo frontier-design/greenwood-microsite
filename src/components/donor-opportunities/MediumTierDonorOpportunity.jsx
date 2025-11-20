@@ -8,7 +8,7 @@ import greenwoodFeatureBench from '../../assets/images/Greenwood_UpdatedPictures
 import socialSpace from '../../assets/images/Greenwood_UpdatedPictures/Greenwood_Social_Space.png';
 
 const DonorOpportunityContainer = styled.section`
-  padding: 4rem 2rem;
+  padding: 2rem 2rem 4rem 2rem;
   background: white;
 `;
 
@@ -80,8 +80,12 @@ const BottomRow = styled.div`
   }
 `;
 
+const CustomGridItemDescription = styled(GridItemDescription)`
+  opacity: 0.85;
+`;
+
 const MediumTierDonorOpportunity = () => {
-  const { tier, subtitle, topRowOpportunities, bottomRowOpportunities } = mediumTierData;
+  const {topRowOpportunities, bottomRowOpportunities } = mediumTierData;
 
   const getImageSrc = (id) => {
     switch (id) {
@@ -103,11 +107,6 @@ const MediumTierDonorOpportunity = () => {
   return (
     <DonorOpportunityContainer id="medium-tier-donor-opportunity">
       <DonorOpportunityContent>
-        <SectionHeader>
-          <SectionTitle color="var(--brand-navy)">{tier} <br /> Donor Opportunities</SectionTitle>
-          <SectionSubtitle color="var(--brand-navy)">{subtitle}</SectionSubtitle>
-        </SectionHeader>
-
         <GridSection>
           {/* Top Row - 2 larger cards */}
           <TopRow>
@@ -119,11 +118,11 @@ const MediumTierDonorOpportunity = () => {
                 />
                 <GridItemContent backgroundColor="var(--brand-navy)">
                   <GridItemTitle>{opportunity.title}</GridItemTitle>
-                  <GridItemDescription>
+                  <CustomGridItemDescription>
                     {opportunity.description}
-                  </GridItemDescription>
+                  </CustomGridItemDescription>
                   <GridItemAmount>{opportunity.amount}</GridItemAmount>
-                  <a href="https://www.greenwoodcollege.org/support-the-greenspace-development" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                  <a href={opportunity.buttonLink} target={opportunity.buttonLink.startsWith('mailto:') ? undefined : '_blank'} rel={opportunity.buttonLink.startsWith('mailto:') ? undefined : 'noopener noreferrer'} style={{ textDecoration: 'none' }}>
                     <GridDonateButton textColor="var(--brand-navy)">{opportunity.buttonText}</GridDonateButton>
                   </a>
                 </GridItemContent>
@@ -141,11 +140,11 @@ const MediumTierDonorOpportunity = () => {
                 />
                 <GridItemContent backgroundColor="var(--brand-navy)">
                   <GridItemTitle>{opportunity.title}</GridItemTitle>
-                  <GridItemDescription>
+                  <CustomGridItemDescription>
                     {opportunity.description}
-                  </GridItemDescription>
+                  </CustomGridItemDescription>
                   <GridItemAmount>{opportunity.amount}</GridItemAmount>
-                  <a href="https://www.greenwoodcollege.org/support-the-greenspace-development" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                  <a href={opportunity.buttonLink} target={opportunity.buttonLink.startsWith('mailto:') ? undefined : '_blank'} rel={opportunity.buttonLink.startsWith('mailto:') ? undefined : 'noopener noreferrer'} style={{ textDecoration: 'none' }}>
                     <GridDonateButton textColor="var(--brand-navy)">{opportunity.buttonText}</GridDonateButton>
                   </a>
                 </GridItemContent>

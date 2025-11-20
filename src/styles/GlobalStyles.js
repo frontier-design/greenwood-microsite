@@ -111,7 +111,7 @@ export const DonateButton = styled.button`
 
 export const SectionTitle = styled.h2`
   font-family: var(--font-display);
-  font-size: clamp(2rem, 2.5vw, 2.5rem);
+  font-size: clamp(2rem, 2.8vw, 4rem);
   color: ${(props) => props.color || "var(--brand-green)"};
   margin: 0 0 0.5rem 0;
   text-transform: uppercase;

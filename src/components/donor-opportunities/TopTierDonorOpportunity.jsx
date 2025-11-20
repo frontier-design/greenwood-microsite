@@ -7,7 +7,7 @@ import floodLighting from '../../assets/images/Greenwood_UpdatedPictures/Greenwo
 import greenwoodGate from '../../assets/images/Greenwood_UpdatedPictures/Greenwood_gate.jpg';
 
 const DonorOpportunityContainer = styled.section`
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 0 2rem;
   background: white;
 `;
 
@@ -34,6 +34,18 @@ const SectionHeader = styled.div`
 
   @media (min-width: 2000px) {
     max-width: 1600px;
+  }
+`;
+
+const CustomSectionSubtitle = styled(SectionSubtitle)`
+  font-size: clamp(1.1rem, 2.4vw, 1.4rem);
+
+  @media (min-width: 1600px) {
+    font-size: clamp(1.3rem, 2.4vw, 1.6rem);
+  }
+
+  @media (min-width: 2000px) {
+    font-size: clamp(1.5rem, 2.8vw, 2rem);
   }
 `;
 
@@ -130,15 +142,36 @@ const FullWidthGridItem = styled.div`
   }
 `;
 
+const SeparatorWrapper = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  @media (min-width: 1600px) {
+    max-width: 1200px;
+  }
+
+  @media (min-width: 2000px) {
+    max-width: 1600px;
+  }
+`;
+
+const Separator = styled.hr`
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 4rem 0;
+  width: 100%;
+`;
+
 const TopTierDonorOpportunity = () => {
-  const { tier, subtitle, mainOpportunity, gridOpportunities } = topTierData;
+  const {mainOpportunity, gridOpportunities } = topTierData;
 
   return (
     <DonorOpportunityContainer id="top-tier-donor-opportunity">
       <DonorOpportunityContent>
         <SectionHeader>
-          <SectionTitle>{tier}<br />Donor Opportunities</SectionTitle>
-          <SectionSubtitle>{subtitle}</SectionSubtitle>
+          <SectionTitle>Our Shared Spaces</SectionTitle>
+          <CustomSectionSubtitle>Naming & Dedication Opportunities</CustomSectionSubtitle>
         </SectionHeader>
 
         <MainOpportunity id={mainOpportunity.id}>
@@ -155,7 +188,7 @@ const TopTierDonorOpportunity = () => {
               {mainOpportunity.description}
             </MainDescription>
             <MainAmount>{mainOpportunity.amount}</MainAmount>
-            <a href="https://www.greenwoodcollege.org/support-the-greenspace-development" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+            <a href={mainOpportunity.buttonLink} target={mainOpportunity.buttonLink.startsWith('mailto:') ? undefined : '_blank'} rel={mainOpportunity.buttonLink.startsWith('mailto:') ? undefined : 'noopener noreferrer'} style={{ textDecoration: 'none' }}>
               <DonateButton>{mainOpportunity.buttonText}</DonateButton>
             </a>
            </div>
@@ -176,7 +209,7 @@ const TopTierDonorOpportunity = () => {
                     {opportunity.description}
                   </GridItemDescription>
                   <GridItemAmount>{opportunity.amount}</GridItemAmount>
-                  <a href="https://www.greenwoodcollege.org/support-the-greenspace-development" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                  <a href={opportunity.buttonLink} target={opportunity.buttonLink.startsWith('mailto:') ? undefined : '_blank'} rel={opportunity.buttonLink.startsWith('mailto:') ? undefined : 'noopener noreferrer'} style={{ textDecoration: 'none' }}>
                     <GridDonateButton textColor="var(--brand-green)">{opportunity.buttonText}</GridDonateButton>
                   </a>
                 </GridItemContent>
@@ -212,6 +245,9 @@ const TopTierDonorOpportunity = () => {
           })}
         </GridSection>
       </DonorOpportunityContent>
+      <SeparatorWrapper>
+        <Separator />
+      </SeparatorWrapper>
     </DonorOpportunityContainer>
   );
 };

@@ -70,10 +70,13 @@ const OpportunityInfo = styled.div`
 
 const OpportunityTitle = styled.h4`
   font-family: var(--font-display);
-  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-size: clamp(1.25rem, 4vw, 2rem);
   color: var(--brand-gray);
   margin: 0;
   font-weight: 700;
+  max-width: 30ch;
+  margin-bottom: 0.15rem;
+  line-height: 1.2;
 
   @media (min-width: 1600px) {
     font-size: clamp(1.25rem, 3vw, 1.5rem);
@@ -91,6 +94,7 @@ const OpportunityDescription = styled.p`
   line-height: 1.5;
   margin: 0;
   opacity: 0.8;
+  max-width: 60ch;
 
   @media (min-width: 1600px) {
     font-size: clamp(0.875rem, 2.5vw, 1rem);
@@ -123,15 +127,11 @@ const OpportunityAmount = styled.div`
 `;
 
 const OtherDonorOpportunities = () => {
-  const { tier, subtitle, opportunities } = otherTierData;
+  const { opportunities } = otherTierData;
 
   return (
     <DonorOpportunityContainer>
       <DonorOpportunityContent>
-        <SectionHeader>
-          <SectionTitle color="var(--brand-gray)">{tier} <br /> Donor Opportunities</SectionTitle>
-          <SectionSubtitle color="var(--brand-gray)">{subtitle}</SectionSubtitle>
-        </SectionHeader>
 
         <OpportunitiesList>
           {opportunities.map((opportunity) => (
@@ -143,7 +143,7 @@ const OtherDonorOpportunities = () => {
                 </OpportunityDescription>
               </OpportunityInfo>
               <OpportunityAmount>{opportunity.amount}</OpportunityAmount>
-              <a href="https://www.greenwoodcollege.org/support-the-greenspace-development" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+              <a href={opportunity.buttonLink} target={opportunity.buttonLink.startsWith('mailto:') ? undefined : '_blank'} rel={opportunity.buttonLink.startsWith('mailto:') ? undefined : 'noopener noreferrer'} style={{ textDecoration: 'none' }}>
                 <GridDonateButton 
                   backgroundColor="var(--brand-gray)" 
                   textColor="white"
