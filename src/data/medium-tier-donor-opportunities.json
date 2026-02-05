@@ -10,7 +10,7 @@
       "description": "A second flexible outdoor classroom designed for group learning, reflection, and community activities within the natural landscape.",
       "amount": "$150,000",
       "buttonText": "Donate Now",
-      "buttonLink": "#"
+      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
     },
     {
       "id": "east-garden-opportunity",
@@ -20,7 +20,7 @@
       "description": "A dedicated outdoor learning and meeting area where classes gather, collaborate, and engage with nature as an extension of the school's teaching spaces.",
       "amount": "$150,000",
       "buttonText": "Donate Now",
-      "buttonLink": "#"
+      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
     }
   ],
   "bottomRowOpportunities": [
@@ -32,7 +32,7 @@
       "description": "A vital safety feature that protects the community while preserving sightlines and open space around the field.",
       "amount": "$100,000",
       "buttonText": "Donate Now",
-      "buttonLink": "#"
+      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
     },
     {
       "id": "feature-bench-opportunity",
@@ -42,7 +42,7 @@
       "description": "A beautifully designed bench framed by a pollinator-friendly border garden, offering a peaceful place to sit, relax, and enjoy the Greenspace.",
       "amount": "$100,000",
       "buttonText": "Donate Now",
-      "buttonLink": "#"
+      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
     },
     {
       "id": "social-space-opportunity",
@@ -52,7 +52,7 @@
       "description": "A central gathering zone where students connect, socialize, and build friendships in a thoughtfully designed outdoor setting.",
       "amount": "$100,000",
       "buttonText": "Donate Now",
-      "buttonLink": "#"
+      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
     }
   ]
 }

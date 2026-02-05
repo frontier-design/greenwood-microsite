@@ -8,7 +8,7 @@
       "description": "A playful, soft-turfed rise within the landscape that adds elevation, interest, and movement to the Greenspace.",
       "amount": "$50,000",
       "buttonText": "Donate Now",
-      "buttonLink": "#"
+      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
     },
     {
       "id": "hydration-station-opportunity",
@@ -16,7 +16,7 @@
       "description": "An accessible water-refill station that promotes sustainability and supports active outdoor learning and play.",
       "amount": "$35,000",
       "buttonText": "Donate Now",
-      "buttonLink": "#"
+      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
     },
     {
       "id": "north-green-fence-opportunity",
@@ -24,7 +24,7 @@
       "description": "A key boundary feature that frames the Greenspace and enhances safety while maintaining a natural, open feel.",
       "amount": "$25,000",
       "buttonText": "Donate Now",
-      "buttonLink": "#"
+      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
     },
     {
       "id": "west-green-fence-opportunity",
@@ -32,7 +32,7 @@
       "description": "A complementary fence line that secures the west side of the campus and contributes to the cohesive design of the Greenspace.",
       "amount": "$25,000",
       "buttonText": "Donate Now",
-      "buttonLink": "#"
+      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
     },
     {
       "id": "greening-trees-opportunity",
@@ -40,7 +40,7 @@
       "description": "Seventeen individually recognized trees that will grow to define the character, shade, and ecological richness of the Greenspace.",
       "amount": "$25,000",
       "buttonText": "Donate Now",
-      "buttonLink": "#"
+      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
     },
     {
       "id": "concrete-benches-opportunity",
@@ -48,7 +48,7 @@
       "description": "Comfortable concrete seating providing durable and welcoming resting spots throughout the Greenspace.",
       "amount": "$15,000",
       "buttonText": "Donate Now",
-      "buttonLink": "#"
+      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
     },
     {
       "id": "lamp-posts-opportunity",
@@ -56,7 +56,7 @@
       "description": "Lighting elements that brighten pathways and promote safe use of the Greenspace during early mornings and evenings.",
       "amount": "$10,000",
       "buttonText": "Donate Now",
-      "buttonLink": "#"
+      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
     },
     {
       "id": "city-trees-opportunity",
@@ -64,7 +64,23 @@
       "description": "Three city-planted trees enhancing the perimeter of campus and contributing to long-term environmental sustainability.",
       "amount": "$10,000",
       "buttonText": "Donate Now",
-      "buttonLink": "#"
+      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
+    },
+    {
+      "id": "community-donor-wall-tier-a",
+      "title": "The Community Donor Wall — Tier A",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "amount": "$5,000–$9,999",
+      "buttonText": "Donate Now",
+      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
+    },
+    {
+      "id": "community-donor-wall-tier-b",
+      "title": "The Community Donor Wall — Tier B",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "amount": "$2,000–$4,999",
+      "buttonText": "Donate Now",
+      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
     }
   ]
 }
