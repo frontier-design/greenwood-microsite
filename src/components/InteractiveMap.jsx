@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { SectionTitle, SectionSubtitle } from '../styles/GlobalStyles';
 import interactiveMap from '../assets/images/photos/interactive-map.jpg';
 
 const MapContainer = styled.section`
