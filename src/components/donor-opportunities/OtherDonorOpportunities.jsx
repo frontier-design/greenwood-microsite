@@ -135,7 +135,7 @@ const OtherDonorOpportunities = () => {
 
         <OpportunitiesList>
           {opportunities.map((opportunity) => (
-            <OpportunityItem key={opportunity.id}>
+            <OpportunityItem key={opportunity.id} id={opportunity.id}>
               <OpportunityInfo>
                 <OpportunityTitle>{opportunity.title}</OpportunityTitle>
                 <OpportunityDescription>

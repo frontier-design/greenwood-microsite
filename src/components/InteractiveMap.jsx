@@ -67,7 +67,7 @@ const InteractivePoint = styled.div`
     transform: translate(-50%, -50%);
     width: ${props => props.size === '32px' ? '16px' : props.size === '28px' ? '14px' : '12px'};
     height: ${props => props.size === '32px' ? '16px' : props.size === '28px' ? '14px' : '12px'};
-    background: ${props => props.tier === 'medium' ? 'var(--brand-navy)' : 'var(--brand-green)'};
+    background: ${props => props.tier === 'other' ? 'var(--brand-gray)' : props.tier === 'medium' ? 'var(--brand-navy)' : 'var(--brand-green)'};
     border-radius: 50%;
     z-index: 3;
   }
@@ -79,7 +79,7 @@ const InteractivePoint = styled.div`
     transform: translate(-50%, -50%);
     width: ${props => props.size || '24px'};
     height: ${props => props.size || '24px'};
-    border: 2px solid ${props => props.tier === 'medium' ? 'var(--brand-navy)' : 'var(--brand-green)'};
+    border: 2px solid ${props => props.tier === 'other' ? 'var(--brand-gray)' : props.tier === 'medium' ? 'var(--brand-navy)' : 'var(--brand-green)'};
     border-radius: 50%;
     z-index: 1;
     animation: radiate 2s ease-in-out infinite;
@@ -104,7 +104,7 @@ const InteractivePoint = styled.div`
 
 const Tooltip = styled.div`
   position: absolute;
-  background: ${props => props.tier === 'medium' ? 'var(--brand-navy)' : 'var(--brand-green)'};
+  background: ${props => props.tier === 'other' ? 'var(--brand-gray)' : props.tier === 'medium' ? 'var(--brand-navy)' : 'var(--brand-green)'};
   border-radius: 8px;
   padding: 1.5rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
@@ -257,10 +257,30 @@ const InteractiveMap = () => {
     {
       id: 'social-space',
       name: 'Social Space',
-      amount: '$100,000',
+      amount: '$80,000',
       position: { top: '25%', left: '48%' },
       size: '20px',
       animationDelay: '2.4s',
+      sectionId: 'social-space-gathering-opportunity',
+      tier: 'other'
+    },
+    {
+      id: 'connection-space',
+      name: 'Connection Space',
+      amount: '$80,000',
+      position: { top: '40%', left: '24%' },
+      size: '20px',
+      animationDelay: '2.7s',
+      sectionId: 'play-space-opportunity',
+      tier: 'other'
+    },
+    {
+      id: 'field-house',
+      name: 'Field House',
+      amount: '$100,000',
+      position: { top: '15%', left: '45%' },
+      size: '20px',
+      animationDelay: '3s',
       sectionId: 'social-space-opportunity',
       tier: 'medium'
     }
