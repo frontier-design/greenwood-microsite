@@ -104,6 +104,32 @@ const MediumTierDonorOpportunity = () => {
     }
   };
 
+  const renderOpportunityButton = (opportunity) => {
+    const isSold = opportunity.buttonText?.trim().toUpperCase() === 'SOLD';
+    const button = (
+      <GridDonateButton type="button" disabled={isSold} textColor="var(--brand-navy)" sold={isSold}>
+        {opportunity.buttonText}
+      </GridDonateButton>
+    );
+
+    if (isSold) {
+      return button;
+    }
+
+    const isMailTo = opportunity.buttonLink?.startsWith('mailto:');
+
+    return (
+      <a
+        href={opportunity.buttonLink}
+        target={isMailTo ? undefined : '_blank'}
+        rel={isMailTo ? undefined : 'noopener noreferrer'}
+        style={{ textDecoration: 'none' }}
+      >
+        {button}
+      </a>
+    );
+  };
+
   return (
     <DonorOpportunityContainer id="medium-tier-donor-opportunity">
       <DonorOpportunityContent>
@@ -122,9 +148,7 @@ const MediumTierDonorOpportunity = () => {
                     {opportunity.description}
                   </CustomGridItemDescription>
                   <GridItemAmount>{opportunity.amount}</GridItemAmount>
-                  <a href={opportunity.buttonLink} target={opportunity.buttonLink.startsWith('mailto:') ? undefined : '_blank'} rel={opportunity.buttonLink.startsWith('mailto:') ? undefined : 'noopener noreferrer'} style={{ textDecoration: 'none' }}>
-                    <GridDonateButton textColor="var(--brand-navy)">{opportunity.buttonText}</GridDonateButton>
-                  </a>
+                  {renderOpportunityButton(opportunity)}
                 </GridItemContent>
               </GridItem>
             ))}
@@ -144,9 +168,7 @@ const MediumTierDonorOpportunity = () => {
                     {opportunity.description}
                   </CustomGridItemDescription>
                   <GridItemAmount>{opportunity.amount}</GridItemAmount>
-                  <a href={opportunity.buttonLink} target={opportunity.buttonLink.startsWith('mailto:') ? undefined : '_blank'} rel={opportunity.buttonLink.startsWith('mailto:') ? undefined : 'noopener noreferrer'} style={{ textDecoration: 'none' }}>
-                    <GridDonateButton textColor="var(--brand-navy)">{opportunity.buttonText}</GridDonateButton>
-                  </a>
+                  {renderOpportunityButton(opportunity)}
                 </GridItemContent>
               </GridItem>
             ))}

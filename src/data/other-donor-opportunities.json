@@ -23,16 +23,16 @@
       "title": "Hillock",
       "description": "A playful, soft-turfed rise within the landscape that adds elevation, interest, and movement to the Greenspace.",
       "amount": "$50,000",
-      "buttonText": "Donate Now",
-      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
+      "buttonText": "SOLD",
+      "buttonLink": "#"
     },
     {
       "id": "hydration-station-opportunity",
       "title": "Hydration Station",
       "description": "An accessible water-refill station that promotes sustainability and supports active outdoor learning and play.",
       "amount": "$35,000",
-      "buttonText": "Donate Now",
-      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
+      "buttonText": "SOLD",
+      "buttonLink": "#"
     },
     {
       "id": "north-green-fence-opportunity",

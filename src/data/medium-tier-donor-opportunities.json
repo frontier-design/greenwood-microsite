@@ -9,8 +9,8 @@
       "title": "West Gathering Garden",
       "description": "A second flexible outdoor classroom designed for group learning, reflection, and community activities within the natural landscape.",
       "amount": "$150,000",
-      "buttonText": "Donate Now",
-      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
+      "buttonText": "SOLD",
+      "buttonLink": "#"
     },
     {
       "id": "east-garden-opportunity",
@@ -19,8 +19,8 @@
       "title": "East Gathering Garden",
       "description": "A dedicated outdoor learning and meeting area where classes gather, collaborate, and engage with nature as an extension of the school's teaching spaces.",
       "amount": "$150,000",
-      "buttonText": "Donate Now",
-      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
+      "buttonText": "SOLD",
+      "buttonLink": "#"
     }
   ],
   "bottomRowOpportunities": [
@@ -41,8 +41,8 @@
       "title": "Greenwood Feature Bench",
       "description": "A beautifully designed bench framed by a pollinator-friendly border garden, offering a peaceful place to sit, relax, and enjoy the Greenspace.",
       "amount": "$100,000",
-      "buttonText": "Donate Now",
-      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
+      "buttonText": "SOLD",
+      "buttonLink": "#"
     },
     {
       "id": "social-space-opportunity",

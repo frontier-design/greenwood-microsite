@@ -211,19 +211,49 @@ export const GridItemAmount = styled.div`
 `;
 
 export const GridDonateButton = styled.button`
-  background: white;
-  color: ${(props) => props.textColor || "var(--brand-green)"};
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  background: ${(props) => props.sold ? "#d9dde3" : (props.backgroundColor || "white")};
+  color: ${(props) => props.sold ? "var(--brand-gray)" : (props.textColor || "var(--brand-green)")};
   border: none;
   font-size: 1rem;
   font-weight: 700;
   border-radius: var(--button-radius);
-  cursor: pointer;
+  cursor: ${(props) => props.sold ? "not-allowed" : "pointer"};
   transition: all 0.2s ease;
-  align-self: flex-start;
+  align-self: ${(props) => props.alignSelf ?? "flex-start"};
 
   &:hover {
-    background: #f0f0f0;
-    transform: translateY(1px);
+    background: ${(props) => props.sold ? "#d9dde3" : "#f0f0f0"};
+    transform: ${(props) => props.sold ? "none" : "translateY(1px)"};
+    cursor: ${(props) => props.sold ? "not-allowed" : "pointer"};
+  }
+
+  &:focus-visible {
+    cursor: ${(props) => props.sold ? "not-allowed" : "pointer"};
+  }
+
+  &:disabled {
+    opacity: 1;
+    cursor: not-allowed;
+    ${(props) =>
+      props.sold &&
+      `
+      background: #d9dde3;
+      color: var(--brand-gray);
+    `}
+  }
+
+  &:disabled:hover {
+    cursor: not-allowed;
+    ${(props) =>
+      props.sold &&
+      `
+      background: #d9dde3;
+      transform: none;
+    `}
   }
 `;
 
