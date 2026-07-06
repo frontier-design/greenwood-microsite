@@ -15,8 +15,8 @@
       "title": "Social Space",
       "description": "A central gathering zone where students connect, socialize, and build friendships in a thoughtfully designed outdoor setting.",
       "amount": "$80,000",
-      "buttonText": "Donate Now",
-      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
+      "buttonText": "SOLD",
+      "buttonLink": "#"
     },
     {
       "id": "hillock-opportunity",
@@ -25,6 +25,14 @@
       "amount": "$50,000",
       "buttonText": "SOLD",
       "buttonLink": "#"
+    },
+    {
+      "id": "wood-benches-opportunity",
+      "title": "Wood Benches",
+      "description": "Wood benches providing welcoming resting spots at the entrance to the Greenspace.",
+      "amount": "$50,000",
+      "buttonText": "Donate Now",
+      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
     },
     {
       "id": "hydration-station-opportunity",
@@ -47,13 +55,13 @@
       "title": "West Green Fence",
       "description": "A complementary fence line that secures the west side of the campus and contributes to the cohesive design of the Greenspace.",
       "amount": "$25,000",
-      "buttonText": "Donate Now",
-      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
+      "buttonText": "SOLD",
+      "buttonLink": "#"
     },
     {
-      "id": "greening-trees-opportunity",
-      "title": "Greening the Green Trees",
-      "description": "Seventeen individually recognized trees that will grow to define the character, shade, and ecological richness of the Greenspace.",
+      "id": "greening-north-trees-opportunity",
+      "title": "Greening of the North Trees",
+      "description": "Five individually recognized trees that will grow to define the character, shade, and ecological richness of the Greenspace.",
       "amount": "$25,000",
       "buttonText": "Donate Now",
       "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
@@ -63,7 +71,7 @@
       "title": "Concrete Benches",
       "description": "Comfortable concrete seating providing durable and welcoming resting spots throughout the Greenspace.",
       "amount": "$15,000",
-      "buttonText": "Donate Now",
+      "buttonText": "9 Remaining",
       "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
     },
     {
@@ -75,11 +83,11 @@
       "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
     },
     {
-      "id": "city-trees-opportunity",
-      "title": "Planting of the City Trees Along Property Line",
-      "description": "Three city-planted trees enhancing the perimeter of campus and contributing to long-term environmental sustainability.",
+      "id": "greening-east-trees-opportunity",
+      "title": "Greening of the East Trees",
+      "description": "Eight trees planted enhancing the east perimeter of campus and contributing to long-term environmental sustainability.",
       "amount": "$10,000",
-      "buttonText": "Donate Now",
+      "buttonText": "5 Remaining",
       "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
     },
     {

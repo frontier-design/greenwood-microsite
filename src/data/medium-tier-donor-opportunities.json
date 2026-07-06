@@ -5,8 +5,8 @@
     {
       "id": "west-garden-opportunity",
       "image": "/src/assets/images/Greenwood_UpdatedPictures/Greenwood_West_gathering_garden.jpg",
-      "alt": "West Gathering Garden outdoor space",
-      "title": "West Gathering Garden",
+      "alt": "North Garden outdoor space",
+      "title": "North Garden",
       "description": "A second flexible outdoor classroom designed for group learning, reflection, and community activities within the natural landscape.",
       "amount": "$150,000",
       "buttonText": "SOLD",
@@ -15,8 +15,8 @@
     {
       "id": "east-garden-opportunity",
       "image": "/src/assets/images/Greenwood_UpdatedPictures/Greenwood_East_gathering_garden.jpg",
-      "alt": "East Gathering Garden with covered seating",
-      "title": "East Gathering Garden",
+      "alt": "South Garden with covered seating",
+      "title": "South Garden",
       "description": "A dedicated outdoor learning and meeting area where classes gather, collaborate, and engage with nature as an extension of the school's teaching spaces.",
       "amount": "$150,000",
       "buttonText": "SOLD",
@@ -41,18 +41,18 @@
       "title": "Greenwood Feature Bench",
       "description": "A beautifully designed bench framed by a pollinator-friendly border garden, offering a peaceful place to sit, relax, and enjoy the Greenspace.",
       "amount": "$100,000",
-      "buttonText": "SOLD",
-      "buttonLink": "#"
+      "buttonText": "2 Remaining",
+      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
     },
     {
       "id": "social-space-opportunity",
       "image": "/src/assets/images/Greenwood_UpdatedPictures/Greenwood_Social_Space.png",
       "alt": "Social space at night with lighting",
-      "title": "Field House",
+      "title": "Field<br />House",
       "description": "A functional and well-designed storage hub supporting athletics and outdoor programming throughout the year.",
       "amount": "$100,000",
-      "buttonText": "Donate Now",
-      "buttonLink": "https://www.greenwoodcollege.org/support-the-greenspace-development"
+      "buttonText": "SOLD",
+      "buttonLink": "#"
     }
   ]
 }

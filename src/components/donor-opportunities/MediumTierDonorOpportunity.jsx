@@ -143,7 +143,7 @@ const MediumTierDonorOpportunity = () => {
                   alt={opportunity.alt}
                 />
                 <GridItemContent backgroundColor="var(--brand-navy)">
-                  <GridItemTitle>{opportunity.title}</GridItemTitle>
+                  <GridItemTitle dangerouslySetInnerHTML={{ __html: opportunity.title }} />
                   <CustomGridItemDescription>
                     {opportunity.description}
                   </CustomGridItemDescription>
@@ -163,7 +163,7 @@ const MediumTierDonorOpportunity = () => {
                   alt={opportunity.alt}
                 />
                 <GridItemContent backgroundColor="var(--brand-navy)">
-                  <GridItemTitle>{opportunity.title}</GridItemTitle>
+                  <GridItemTitle dangerouslySetInnerHTML={{ __html: opportunity.title }} />
                   <CustomGridItemDescription>
                     {opportunity.description}
                   </CustomGridItemDescription>

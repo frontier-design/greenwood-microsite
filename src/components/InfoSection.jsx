@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import infoSectionImage from '../assets/images/photos/info-section.jpg';
+import timelapseVideo from '../assets/videos/greenwood-timelapse-final.mp4';
 import { DonateButton, Description } from '../styles/GlobalStyles';
 
 const InfoContainer = styled.section`
@@ -46,11 +46,25 @@ const ImageColumn = styled.div`
   justify-content: center;
 `;
 
-const InfoImage = styled.img`
+const VIDEO_WIDTH = 720;
+const VIDEO_HEIGHT = 406;
+const CROP_X = 36;
+const CONTENT_WIDTH = VIDEO_WIDTH - CROP_X * 2;
+
+const VideoWrapper = styled.div`
   width: 100%;
-  height: auto;
+  aspect-ratio: ${CONTENT_WIDTH} / ${VIDEO_HEIGHT};
+  overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+`;
+
+const InfoVideo = styled.video`
+  display: block;
+  width: ${(VIDEO_WIDTH / CONTENT_WIDTH) * 100}%;
+  max-width: none;
+  margin-left: ${((VIDEO_WIDTH - CONTENT_WIDTH) / 2 / CONTENT_WIDTH) * -100}%;
+  height: auto;
 `;
 
 const InfoSection = () => {
@@ -68,10 +82,16 @@ const InfoSection = () => {
         </TextColumn>
         
         <ImageColumn>
-          <InfoImage 
-            src={infoSectionImage}
-            alt="Greenwood Greenspace"
-          />
+          <VideoWrapper>
+            <InfoVideo
+              src={timelapseVideo}
+              autoPlay
+              muted
+              loop
+              playsInline
+              aria-label="Greenwood Greenspace construction timelapse"
+            />
+          </VideoWrapper>
         </ImageColumn>
       </InfoContent>
     </InfoContainer>

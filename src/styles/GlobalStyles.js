@@ -226,7 +226,15 @@ export const GridDonateButton = styled.button`
   align-self: ${(props) => props.alignSelf ?? "flex-start"};
 
   &:hover {
-    background: ${(props) => props.sold ? "#d9dde3" : "#f0f0f0"};
+    background: ${(props) => {
+      if (props.sold) return "#d9dde3";
+      if (props.hoverBackgroundColor) return props.hoverBackgroundColor;
+      if (props.backgroundColor) {
+        return `color-mix(in srgb, ${props.backgroundColor} 92%, white)`;
+      }
+      return "#f0f0f0";
+    }};
+    color: ${(props) => props.sold ? "var(--brand-gray)" : (props.textColor || "var(--brand-green)")};
     transform: ${(props) => props.sold ? "none" : "translateY(1px)"};
     cursor: ${(props) => props.sold ? "not-allowed" : "pointer"};
   }

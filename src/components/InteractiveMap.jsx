@@ -216,7 +216,7 @@ const InteractiveMap = () => {
     },
     {
       id: 'west-garden',
-      name: 'West Gathering Garden',
+      name: 'North Garden',
       amount: '$150,000',
       position: { top: '38%', left: '25.5%' },
       size: '24px',
@@ -226,7 +226,7 @@ const InteractiveMap = () => {
     },
     {
       id: 'east-garden',
-      name: 'East Gathering Garden',
+      name: 'South Garden',
       amount: '$150,000',
       position: { top: '28%', left: '33.5%' },
       size: '24px',
