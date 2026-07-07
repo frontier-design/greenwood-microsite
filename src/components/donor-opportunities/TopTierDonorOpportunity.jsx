@@ -187,7 +187,7 @@ const TopTierDonorOpportunity = () => {
             <MainDescription>
               {mainOpportunity.description}
             </MainDescription>
-            <MainAmount>{mainOpportunity.amount}</MainAmount>
+            {mainOpportunity.amount && <MainAmount>{mainOpportunity.amount}</MainAmount>}
             <a href={mainOpportunity.buttonLink} target={mainOpportunity.buttonLink.startsWith('mailto:') ? undefined : '_blank'} rel={mainOpportunity.buttonLink.startsWith('mailto:') ? undefined : 'noopener noreferrer'} style={{ textDecoration: 'none' }}>
               <DonateButton>{mainOpportunity.buttonText}</DonateButton>
             </a>
