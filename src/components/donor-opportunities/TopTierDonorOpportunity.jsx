@@ -118,6 +118,12 @@ const MainAmount = styled.div`
   margin: 0.5rem 0;
 `;
 
+const MainButtonLink = styled.a`
+  text-decoration: none;
+  display: inline-block;
+  margin-top: ${({ $hasAmount }) => ($hasAmount ? '0' : '1.5rem')};
+`;
+
 const GridSection = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -188,9 +194,14 @@ const TopTierDonorOpportunity = () => {
               {mainOpportunity.description}
             </MainDescription>
             {mainOpportunity.amount && <MainAmount>{mainOpportunity.amount}</MainAmount>}
-            <a href={mainOpportunity.buttonLink} target={mainOpportunity.buttonLink.startsWith('mailto:') ? undefined : '_blank'} rel={mainOpportunity.buttonLink.startsWith('mailto:') ? undefined : 'noopener noreferrer'} style={{ textDecoration: 'none' }}>
+            <MainButtonLink
+              href={mainOpportunity.buttonLink}
+              target={mainOpportunity.buttonLink.startsWith('mailto:') ? undefined : '_blank'}
+              rel={mainOpportunity.buttonLink.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
+              $hasAmount={Boolean(mainOpportunity.amount)}
+            >
               <DonateButton>{mainOpportunity.buttonText}</DonateButton>
-            </a>
+            </MainButtonLink>
            </div>
           </MainContent>
         </MainOpportunity>
